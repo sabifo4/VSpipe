@@ -1,0 +1,201 @@
+# ----------------------------------------------------- #
+# -------     INSTALL VSpipe ON UBUNTU        --------- #
+# ----------------------------------------------------- #
+
+#\\----------------------- #
+#\\ INSTALLING MGLTools    #
+#\\----------------------- #
+# Follow the next instructions to install MGLTools on Linux
+
+# 1. Download the binary for your distribution at
+#    http://mgltools.scripps.edu/downloads/latest
+#    If you do not have the 64 bits linux, follow
+#    the instructions but change the name of the 
+#    package accordingly.
+#    This installation assumes that you are installing
+#    the package in the directory “~/Applications/VSpipe”.
+#    If you are not, just remember to change the following
+#    commands according to your environment.
+
+    tar -xzvf mgltools_x86_64Linux2_latest.tar.gz
+    chmod +x  mgltools_x86_64Linux2_latest
+    cd mgltools_x86_64Linux2_latest/
+    tar -xzvf MGLToolsPckgs.tar.gz
+
+# 2. Export the path to your .bashrc
+
+    echo "export PATH=$PATH:~/Applications/VSpipe/mgltools_x86_64Linux2_latest" >> ~/.bashrc
+
+# 3. Run the following still being the directory 
+#     ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/
+
+    install.sh
+
+# 4. Add these aliases in the .bashrc file:
+
+    alias pmv='~/Applications/VSpipe/mgltools_x86_64Linux2_latest/bin/pmv'
+    alias adt='~/Applications/VSpipe/mgltools_x86_64Linux2_latest/bin/adt'
+    alias vision='~/Applications/VSpipe/mgltools_x86_64Linux2_latest/bin/vision'
+    alias pythonsh='~/Applications/VSpipe/mgltools_x86_64Linux2_latest/bin/pythonsh'
+
+# 5. Run this command from the directory you are
+    source ./initMGLtools.sh   
+
+# 6. Install AD4 if you do not have it yet
+    sudo apt-get install autodock
+
+# 7. Install Vina.
+#    Download the corresponding binary files of Vina for LINUX
+#    autodock_vina_1_1_2_linux_x86.tar.gz:
+#    http://vina.scripps.edu/download.html
+#
+#    After that, copy both the executables "vina" and "vina_split" in the "pidock" 
+#    directory. Supposing you saved the vina zipped file in /Applications/VSpipe:
+
+    tar -xzvf autodock_vina_1_1_2_linux_x86.tar.gz
+    cp ~/Applications/VSpipe/autodock_vina_1_1_2_linux_x86/bin/vina ~/Applications/VSpipe/pidock
+    cp ~/Applications/VSpipe/autodock_vina_1_1_2_linux_x86/bin/vina_split ~/Applications/VSpipe/pidock
+
+# 8. Download the corresponding binary files of AD4 for LINUX
+#    First one has to register and, afterwards, tools can be downloaded
+#    from
+#    http://autodock.scripps.edu/downloads/autodock-registration/fg_base_view
+#    Once it is downloaded, copy both "autogrid" and "autodock4" in the "pidock" #    directory
+
+    tar -xzvf autodocksuite-4.2.6-x86_64Linux2.tar
+    cp ~/Applications/VSpipe/x86_64Linux2/autodock4 ~/Applications/VSpipe/pidock
+    cp ~/Applications/VSpipe/x86_64Linux2/autogrid4 ~/Applications/VSpipe/pidock
+
+# 9. Now copy the files prepare_dpf4.py, prepare_gpf4.py, prepare_ligand4.py,
+#    prepare_receptor4.py, and summarize_results4.py to 
+#    "mgltools_x86_64Linux2_latest/MGLToolsPckgs".
+#    They are located in
+#    "mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/"
+
+    cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_dpf4.py ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs
+
+    cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_gpf4.py ~/Applications/VSpipe//mgltools_x86_64Linux2_latest/MGLToolsPckgs
+
+    cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_ligand4.py ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs
+
+    cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_receptor4.py ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs
+
+    cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/summarize_results4.py ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs
+
+# 10. Do not forget to give permissions to all the scripts in the "pidock" directory!
+    chmod 775 ~/Applications/VSpipe/pidock
+
+# \\ ----------------------- // #
+# \\ ----------------------- // #
+
+
+
+#\\ ---------------------- #
+#\\ INSTALLING OpenBabel   # 
+#\\----------------------- #
+# Follow the next instructions to install MGLTools on Linux
+
+# 1. Install the current version: http://openbabel.org/wiki/Category:Installation
+
+# 2. Install cairo library and libpython-dev
+
+    sudo apt-get install libpython-dev
+    sudo apt-get install libcairo2-dev
+
+# 3. There are some requirements specified in the INSTALL file in OpenBabel
+#    Even though there are some that are optional, here we are going to explain
+#    how to install them all:
+
+# 3.1. CMake 2.4.8 or later
+
+    sudo apt-get install cmake
+
+# 3.2. Eigen 3.0 or later (optional)
+
+    sudo apt-get install libeigen3-dev
+
+# 3.3. libxml2 (optional)
+
+    sudo apt-get install libxml2-dev
+
+# 3.4. zlib (optional)
+
+    sudo apt-get install zlib1g-dev
+
+# 3.5. wxWidgets 2.8 (optional, needed to build GUI)
+
+    sudo apt-get install libwxgtk3.0-dev
+
+# 4. Follow OpenBabel installation. Here we only add the basic installation.
+#    If you want an advanced installation, check their INSTALL file
+# 
+#    The following instructions assume that the Open Babel source distribution is in
+#    the directory ~/Applications/openbabel-2.4.1.
+
+# 4.1. Create a 'build' directory:
+    cd ~/Applications/openbabel-2.4.1
+    mkdir build
+    cd build
+
+# 4.2. Configure the build system. You can specify additional build
+#      options at this time (see below):
+
+    cmake ..
+
+# 4.3. Compile:
+
+    make -j2
+
+# 4.4. Test (optional):
+
+    make test
+
+# 4.5. Install:
+
+    sudo make install
+
+# \\ --------------------- // #
+# \\ --------------------- // #
+
+
+
+#\\----------------------- #
+#\\ INSTALLING Anaconda    #
+#\\----------------------- #
+
+# If you do not have Anaconda, we recommend you to install it. 
+# 1. Download Anaconda for linux from https://www.anaconda.com/download/#download
+
+# 2. Follow the instructions in https://conda.io/docs/user-guide/install/linux.html
+#    so then run the bash script you have downloaded to install Anaconda
+
+    bash Anaconda-latest-Linux-x86_64.sh
+
+# 3. Follow the instructions of the installer.
+#    Theoretically, you can customize your installation, 
+#    but when we tried it, we could only install it 
+#    in the directory ~/anaconda2
+
+# 4. Apparently, there is a problem with the new version of Numpy (numpy>1.9)
+#    which does not support numpy.oldnumeric (used by some AutoDock python scripts
+#    during the VS). In Bitbucket, 
+#    (see https://bitbucket.org/khinsen/scientificpython/issues/13)
+#    they make some suggestions, although we decided to install a lower 
+#    version of numpy by doing the following and the AutoDock scripts that 
+#    VSpipe uses could then work:
+
+   pip install "numpy<1.9"
+
+# 5. If you saw any warnings regarding mgltools python packages, 
+#    for instance mgltools-molkit, you can install them 
+#    by typing the following command
+
+   sudo apt-get install mgltools-[name]
+
+#    They are listed here https://www.howtoinstall.co/en/ubuntu/trusty/?condition=starts-with&search=mg
+#    or you can type "sudo apt-get install mgltools-", press the tab,
+#    and you will see which packages are available
+
+# \\ --------------------- // #
+# \\ --------------------- // #
+
