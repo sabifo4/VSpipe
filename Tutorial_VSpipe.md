@@ -77,7 +77,7 @@ $ pwd
 /home/user/wd/test_VSpipe
 $ /home/Applications/VSpipe/Tools/VSpipe
 
-$ echo "Please type the full path where the prepare_dpf4.py, prepare_gpf4.py,
+"Please type the full path where the prepare_dpf4.py, prepare_gpf4.py,
 prepare_ligand4.py, and prepare_receptor4.py are. After that, please 
 press [ENTER]:"
 
