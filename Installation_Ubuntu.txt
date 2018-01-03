@@ -26,7 +26,7 @@
 
     echo "export PATH=$PATH:~/Applications/VSpipe/mgltools_x86_64Linux2_latest" >> ~/.bashrc
 
-# 3. Run the following still being the directory 
+# 3. Run the following still being inside the directory 
 #     ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/
 
     install.sh
