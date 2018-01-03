@@ -17,6 +17,8 @@
 #    directory “~/Applications/VSpipe”, 
 #    where MGLTools is going to be installed and where 
 #    the downloaded binary is going to be saved.
+#    If you have not cloned this repository, please followed
+#    the instructions detailed in the "VSpipe/Tutorial_VSpipe.md".
 #    
 #    If you are not, just remember to change the following
 #    commands according to your environment.
