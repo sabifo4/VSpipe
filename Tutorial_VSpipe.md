@@ -9,6 +9,7 @@ want to save it, and type the following in a terminal:
 
 This repository consists of the following:
 
+```
 VSpipe 
      |- Tools 
 	 |       |- *Many txt and py files the user should **not** use* 
@@ -20,7 +21,7 @@ VSpipe
 	 |- Install_dependencies.txt
 	 |- README.md
 	 |- Tutorial_VSpipe.md
-
+```
 
 Once you have cloned this repository, you can find the scripts to run `VSpipe` in the directory called 
 **Tools**. In case the files saved in this directory do not have full permissions, please
@@ -86,9 +87,9 @@ $ pwd
 /home/user/wd/test_VSpipe
 $ /home/Applications/VSpipe/Tools/VSpipe_blind
 
-**Please type the full path where the prepare_dpf4.py, prepare_gpf4.py,
+Please type the full path where the prepare_dpf4.py, prepare_gpf4.py,
 prepare_ligand4.py, and prepare_receptor4.py are. After that, please 
-press [ENTER]:**
+press [ENTER]:
 
 ```
 
@@ -121,9 +122,9 @@ $ pwd
 /home/user/wd/test_VSpipe
 $ /home/Applications/VSpipe/pidock/VSpipe
 
-**Please type the full path where the prepare_dpf4.py, prepare_gpf4.py,
+Please type the full path where the prepare_dpf4.py, prepare_gpf4.py,
 prepare_ligand4.py, and prepare_receptor4.py are. After that, please 
-press [ENTER]:**
+press [ENTER]:
 /home/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs
 
 ```
