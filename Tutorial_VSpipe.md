@@ -12,15 +12,15 @@ This repository consists of the following:
 ```
 VSpipe 
     |- Tools 
-|      |- *Many txt and py files the user should **not** use* 
-|	   |- VSpipe_targeted *(VSpipe script to run targeted docking)*
-|	   |- VSpipe_blind    *(VSpipe script to run blind docking)*
-|	   |- filtering.py    *(VSpipe script to filter the results of a VSpipe run)*
-|
-|- Documentation.docx
-|- Install_dependencies.txt
-|- README.md
-|- Tutorial_VSpipe.md
+    |    |- *Many txt and py files the user should **not** use* 
+    |	 |- VSpipe_targeted *(VSpipe script to run targeted docking)*
+    |	 |- VSpipe_blind    *(VSpipe script to run blind docking)*
+    |	 |- filtering.py    *(VSpipe script to filter the results of a VSpipe run)*
+    |
+    |- Documentation.docx
+    |- Install_dependencies.txt
+    |- README.md
+    |- Tutorial_VSpipe.md
 ```
 
 Once you have cloned this repository, you can find the scripts to run `VSpipe` in the directory called 
