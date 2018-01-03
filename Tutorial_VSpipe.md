@@ -77,9 +77,9 @@ $ pwd
 /home/user/wd/test_VSpipe
 $ /home/Applications/VSpipe/Tools/VSpipe
 
-Please type the full path where the prepare_dpf4.py, prepare_gpf4.py,
+$ echo "Please type the full path where the prepare_dpf4.py, prepare_gpf4.py,
 prepare_ligand4.py, and prepare_receptor4.py are. After that, please 
-press [ENTER]:
+press [ENTER]:"
 
 
 # Case 2: Run blind docking from your working directory
