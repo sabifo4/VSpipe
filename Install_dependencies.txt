@@ -12,11 +12,16 @@
 #    If you do not have the 64 bits linux, follow
 #    the instructions but change the name of the 
 #    package accordingly.
-#    This installation assumes that you are installing
-#    the package in the directory “~/Applications/VSpipe”.
+#    This installation assumes that you have already 
+#    cloned this repository and it is saved in the 
+#    directory “~/Applications/VSpipe”, 
+#    where MGLTools is going to be installed and where 
+#    the downloaded binary is going to be saved.
+#    
 #    If you are not, just remember to change the following
 #    commands according to your environment.
-
+    
+	cd ~/Applications/VSpipe
     tar -xzvf mgltools_x86_64Linux2_latest.tar.gz
     chmod +x  mgltools_x86_64Linux2_latest
     cd mgltools_x86_64Linux2_latest/
@@ -49,22 +54,25 @@
 #    autodock_vina_1_1_2_linux_x86.tar.gz:
 #    http://vina.scripps.edu/download.html
 #
-#    After that, copy both the executables "vina" and "vina_split" in the "pidock" 
-#    directory. Supposing you saved the vina zipped file in /Applications/VSpipe:
+#    After that, copy both executables "vina" and "vina_split" in the "Tools" 
+#    directory. Remember this directory is inside the cloned Git repository,
+#    being its path "~/Applications/VSpipe/Tools". Assuming you saved the vina
+#    zipped file in /Applications/VSpipe:
 
     tar -xzvf autodock_vina_1_1_2_linux_x86.tar.gz
-    cp ~/Applications/VSpipe/autodock_vina_1_1_2_linux_x86/bin/vina ~/Applications/VSpipe/pidock
-    cp ~/Applications/VSpipe/autodock_vina_1_1_2_linux_x86/bin/vina_split ~/Applications/VSpipe/pidock
+    cp ~/Applications/VSpipe/autodock_vina_1_1_2_linux_x86/bin/vina ~/Applications/VSpipe/Tools
+    cp ~/Applications/VSpipe/autodock_vina_1_1_2_linux_x86/bin/vina_split ~/Applications/VSpipe/Tools
 
-# 8. Download the corresponding binary files of AD4 for LINUX
+# 8. Download the corresponding binary files of AD4 for LINUX.
 #    First one has to register and, afterwards, tools can be downloaded
 #    from
 #    http://autodock.scripps.edu/downloads/autodock-registration/fg_base_view
-#    Once it is downloaded, copy both "autogrid" and "autodock4" in the "pidock" #    directory
+#    Once it is downloaded, copy both "autogrid" and "autodock4" in the "Tools"
+#    directory:
 
     tar -xzvf autodocksuite-4.2.6-x86_64Linux2.tar
-    cp ~/Applications/VSpipe/x86_64Linux2/autodock4 ~/Applications/VSpipe/pidock
-    cp ~/Applications/VSpipe/x86_64Linux2/autogrid4 ~/Applications/VSpipe/pidock
+    cp ~/Applications/VSpipe/x86_64Linux2/autodock4 ~/Applications/VSpipe/Tools
+    cp ~/Applications/VSpipe/x86_64Linux2/autogrid4 ~/Applications/VSpipe/Tools
 
 # 9. Now copy the files prepare_dpf4.py, prepare_gpf4.py, prepare_ligand4.py,
 #    prepare_receptor4.py, and summarize_results4.py to 
@@ -74,7 +82,7 @@
 
     cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_dpf4.py ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs
 
-    cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_gpf4.py ~/Applications/VSpipe//mgltools_x86_64Linux2_latest/MGLToolsPckgs
+    cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_gpf4.py ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs
 
     cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_ligand4.py ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs
 
@@ -82,8 +90,8 @@
 
     cp ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs/AutoDockTools/Utilities24/summarize_results4.py ~/Applications/VSpipe/mgltools_x86_64Linux2_latest/MGLToolsPckgs
 
-# 10. Do not forget to give permissions to all the scripts in the "pidock" directory!
-    chmod 775 ~/Applications/VSpipe/pidock
+# 10. Do not forget to give permissions to all the scripts in the "Tools" directory!
+    chmod 775 ~/Applications/VSpipe/Tools
 
 # \\ ----------------------- // #
 # \\ ----------------------- // #
