@@ -20,20 +20,20 @@ VSpipe
 ```
 
 Once you have cloned this repository, you can find the source code in the [**`VSpipe.zip`**](https://github.com/sabifo4/VSpipe/releases/download/v0.1.0/VSpipe.zip) file available under the tag `release`. Click [here](https://github.com/sabifo4/VSpipe/releases) to access the `release` site or click the previous link within the zip filename to download it.  
-Once you have downloaded `VSpipe.zip`, please unzip it. You can choose the location of the source code, but in order to make the installation easier, you can keep the unzipped file in the directory where you have cloned the repository of `VSpipe` so it follows the next file architecture:
+Once you have downloaded `VSpipe.zip`, please unzip it and save it in your preferred location. For this tutorial, we will let the path to the unzipped `VSpipe` be `/home/Applications/VSpipe`. If you are saving `VSpipe` in another location, please remember to use your chosen path instead when following this tutorial.
+The contents inside `VSpipe` are the following: 
 
 ```
 VSpipe 
-    |- Documentation.docx
+    |- Tools
+    |  |- database_libraries
+    |  |- *different scripts VSpipe uses*
+    |
+    |- Documentation.txt
     |- Install_dependencies.txt
-    |- README.md
-    |- Tutorial_VSpipe.md
-    |- VSpipe
 ```
 
-In case the files saved in `VSpipe` do not have full permissions, please
-give full permissions as it follows. For this tutorial, we will let the path to the cloned 
-repository be `/home/Applications/VSpipe`. Taking this into account, we should type
+All the source code can be found inside **Tools**, where the different ligand databases `VSpipe` are available together with the scripts `VSpipe` runs. In case these scripts do not have full permissions, please give them as it follows. As previously mentioned, the path used in this tutorial and in the following command is `/home/Applications/VSpipe`, but please change this according to the path where you have saved `VSpipe`. Once taken that into account, please open a terminal and type the following: 
 
 ```bash 
 $ cd /home/Applications/VSpipe
