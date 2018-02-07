@@ -6,7 +6,7 @@ This repository contains the `VSpipe v0.1.0` software in the [`releases`](https:
 
 Currently, `VSpipe` can be run in Mac OSX and Linux distributions.
 
-Please download the `VSpipe.zip` file and follow the instructions to install the dependencies. For a quick start, follow the instructions in the `Tutorial_VSpipe.md` file. 
+Please download the [`VSpipe.zip`](https://github.com/sabifo4/VSpipe/releases/download/v0.1.0/VSpipe.zip) file and follow the instructions to install the dependencies. For a quick start, follow the instructions in the `Tutorial_VSpipe.md` file. 
 
 ## Citation
 
