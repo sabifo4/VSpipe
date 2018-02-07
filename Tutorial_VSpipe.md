@@ -11,20 +11,27 @@ This repository consists of the following:
 
 ```
 VSpipe 
-    |- Tools 
-    |    |- *Many txt and py files the user should **not** use* 
-    |	 |- VSpipe_targeted *(VSpipe script to run targeted docking)*
-    |	 |- VSpipe_blind    *(VSpipe script to run blind docking)*
-    |	 |- filtering.py    *(VSpipe script to filter the results of a VSpipe run)*
-    |
     |- Documentation.docx
     |- Install_dependencies.txt
     |- README.md
     |- Tutorial_VSpipe.md
+    |- [tag] release
+       |- VSpipe.zip <-- SOURCE CODE TO DOWNLOAD!
 ```
 
-Once you have cloned this repository, you can find the scripts to run `VSpipe` in the directory called 
-**Tools**. In case the files saved in this directory do not have full permissions, please
+Once you have cloned this repository, you can find the source code in the [**`VSpipe.zip`**](https://github.com/sabifo4/VSpipe/releases/download/v0.1.0/VSpipe.zip) file available under the tag `release`. Click [here](https://github.com/sabifo4/VSpipe/releases) to access the `release` site or click the previous link within the zip filename to download it.  
+Once you have downloaded `VSpipe.zip`, please unzip it. You can choose the location of the source code, but in order to make the installation easier, you can keep the unzipped file in the directory where you have cloned the repository of `VSpipe` so it follows the next file architecture:
+
+```
+VSpipe 
+    |- Documentation.docx
+    |- Install_dependencies.txt
+    |- README.md
+    |- Tutorial_VSpipe.md
+    |- VSpipe
+```
+
+In case the files saved in `VSpipe` do not have full permissions, please
 give full permissions as it follows. For this tutorial, we will let the path to the cloned 
 repository be `/home/Applications/VSpipe`. Taking this into account, we should type
 
