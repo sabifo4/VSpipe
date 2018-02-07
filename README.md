@@ -10,7 +10,7 @@ Please download the `VSpipe.zip` file and follow the instructions to install the
 
 ## Citation
 
-If you use VSpipe, please cite [VSpipe, an Integrated Resource for Virtual Screening and Hit Selection: Applications to Protein Tyrosine Phospahatase Inhibition](http://www.mdpi.com/1420-3049/23/2/353/html)
+If you use `VSpipe`, please cite [VSpipe, an Integrated Resource for Virtual Screening and Hit Selection: Applications to Protein Tyrosine Phospahatase Inhibition](http://www.mdpi.com/1420-3049/23/2/353/html)
 
 ## Questions
 
