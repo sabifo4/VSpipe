@@ -40,10 +40,9 @@ Applications
       |     |- Install_dependencies_MacOSX.md 
       |     |- Install_dependencies_Linux.md 
       |     |- Install_dependencies_WLS.md 
-	  |     |- VSpipe_details.docx
-	  | 
-	  |- Tutorial 
-	  |     |- Tutorial_VSpipe.md
+      | 
+      |- Tutorial 
+      |     |- *.md
       | 
       |- VSpipe
       |     |- Tools 
@@ -135,14 +134,14 @@ Once you are inside your working directory, you are ready to run `VSpipe`. If yo
 procedure, you might jus be able to run `VSpipe` by typing `VSpipe` on the terminal. Otherwise, you will need 
 to type the whole path to the bash script:
 
-1. Make sure you are in your working directory
+First, make sure you are in your working directory
 
 ```bash
 pwd 
 /home/user/my_dockings/test_VSpipe
 ```
 
-2. Run `VSpipe` for the first time saving a log file 
+Then, you can run `VSpipe` for the first time saving a log file 
 
 ```bash
 VSpipe 2>&1 | tee logfile.txt
@@ -513,108 +512,23 @@ Writing output ... done.
 #  SUMMARISING RESULTS ... ...  #
 #-------------------------------#
 1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
+1 molecules converted 
+```
+
+Note that not all compounds might have passed all filters during the dockng step, hence you might see messages like the one 
+generated in this example during the "summarising results" step:
+
+```
 ==============================
 *** Open Babel Warning  in PerceiveBondOrders
   Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is Vina/lowest_energy_pdb/CC50806.pdb)
 
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
-1 molecule converted
+```
 
+If this is the case, you might want to take a closer look at this compound if it was of interest in your analysis.
+Note that you will see as many `1 molecule converted` messages as ligands you have used. After that, the compounds will be ordered according to increasing dG, and several plots and output files will be generated. 
+
+```
 Ordering the Vina/output.csv and
 Vina/output.tsv by DG in descending order.
 
@@ -640,25 +554,12 @@ THANK YOU FOR USING VSpipe !!
 
 ```
 
-The final compounds will be ordered according to increasing dG and several plots and output files in different formats 
-will be generated. Note that not all compounds might have passed all filters, hence you might see messages like the one 
-generated in this example:
-
-```
-==============================
-*** Open Babel Warning  in PerceiveBondOrders
-  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is Vina/lowest_energy_pdb/CC50806.pdb)
-
-```
-
-If this is the case, you might want to closely look at this compound if it was of interest to your analysis.
-And this is it! You can now use the output files generated and the graphs, as well as the R script `filtering.R` to 
-further filter your results with more or less stringent thresholds and according to other parameters. 
+This is it!! :) You can now use the output files generated and the graphs to evaluate the performance of the virtual screenings. Furthermore, you can use the R script `filtering.R` to further filter your results with more or less stringent thresholds and according to other parameters. The next section will explain how you can do this.
 
 
 ## __Filtering step in VSpipe__
 
-## A.  When VSpipe runs `filtering.R` ...
+### A.  When VSpipe runs `filtering.R` ...
 
 By default, when you run VSpipe there is no filtering. Therefore, you will see that you get 
 inside your `results` directory the following files:
@@ -677,13 +578,13 @@ PSA-numComp.pdf
 SEI-BEI.pdf
 ```
 
-### What are the output files?
+#### What are the output files?
 
-#### PDF files 
+##### PDF files 
 The `*.pdf` files are the plots that are automatically generated. 
 They will use the information of **ALL** the compounds you have tested - not filtered yet !
 
-#### OUTPUT files   
+##### OUTPUT files   
 
 1. The `output.csv` and `output.tsv` contain the same information, they just differ in the separator.
 Remember that `csv` files are "comma" separated, while `tsv` files are "tab" separated. Note that 
@@ -694,7 +595,7 @@ been ordered according to the dG. This is the default ordering that takes place 
 3. The `ordered_output_ATLAS.txt` is written in a format that can be read by the ATLAS platform. You 
 can just grab this file, plug it in ATLAS, and play around :) 
 
-## B. When you run `filtering.R` ...
+### B. When you run `filtering.R` ...
 
 Once `VSpipe` has finished, you can call the `filtering.R` (which also lies within `VSpipe/Tools`. If you have followed previous examples, you 
 might find this in the absolute path `~/Applications/VSpipe-master/VSpipe/Tools`) to further filter your analyses.
@@ -709,13 +610,13 @@ Let's see what each bit of this command does:
 
 ---------------------------------------
 
-1.- _**Rscript**_: This is the command that runs R. The first argument is the `R` script and then you can have the arguments.   
-2.- _**<path_to_VSpipe>/VSpipe/Tools/filtering.R**_: This is the first argument the `Rscript` commands needs: the path to the `filgering.R` file.   
-3.- _**<path_to_your_results_dir_where_you_run_VSpipe>**_: This is the first argument that the `filtering.R` takes and the second `Rscript` takes. 
+   1) _**Rscript**_: This is the command that runs R. The first argument is the `R` script and then you can have the arguments.   
+   2) _**<path_to_VSpipe>/VSpipe/Tools/filtering.R**_: This is the first argument the `Rscript` commands needs: the path to the `filgering.R` file.   
+   3) _**<path_to_your_results_dir_where_you_run_VSpipe>**_: This is the first argument that the `filtering.R` takes and the second `Rscript` takes. 
    The arguments is the path to the `results` directory that was created by VSpipe during 
    the virtual screening and where all the results are. If you have moved to this directory, then you can just type `results/`, **WITH THE SLASH** !!
    If you are running this command somewhere else, make sure that you type the whole path to where this `results` directory is.   
-4.- _**<ORDER_PAR>**_: This is the second argument the `filtering.R` takes and the third that `Rstudio` takes: This is a number that is used to let this
+   4) _**<ORDER_PAR>**_: This is the second argument the `filtering.R` takes and the third that `Rstudio` takes: This is a number that is used to let this
    script know which column contains the property that needs to be used to order and filter the `output.csv` file. Depending on which property you want to use to 
    filter the `output.csv` file, you should type one of the following numbers:   
 
@@ -727,18 +628,16 @@ Let's see what each bit of this command does:
                6: PSA                 14: NBEI
                7: rotatable bonds     15: nBEI
                8: dG                  16: mBEI 		   
-For instance, if you were to use the Ki to filter your `output.csv`, you should type a **9** as the third argument in the whole command (_**NO QUOTATION MARKS!**_).   
-5.- _**<CHOICE_PAR>**_: This is the third argument the `filtering.R` takes and the fourth that `Rstudio` takes. You can filter something by a value greater or lower than 
+   For instance, if you were to use the Ki to filter your `output.csv`, you should type a **9** as the third argument in the whole command (_**NO QUOTATION MARKS!**_).   
+   5) _**<CHOICE_PAR>**_: This is the third argument the `filtering.R` takes and the fourth that `Rstudio` takes. You can filter something by a value greater or lower than 
 another or withing a range. For instance:
 			
 			Filter molecules which Ki is larger than -5.7: ">-5.7"          # Use the symbol > followed by the value 
 			Filter molecules which Ki is lower than -5.7: "<-5.7"           # Use the symbol < followed by the value 
-			Filter molecules which Ki is between -3.5 and -5.7: "-5.7,-3.7" # Use a comma to separate the two values
-
-Note that the quotation marks **ARE REQUIRED** !   
-6.- _**<FILT_PAR>**_: This is the fourth argument the `filtering.R` takes and the fifth that `Rstudio` takes. It is **0** if you do not want to filter anything - this is 
-the default mode the pipeline runs, in which nothing is filtered but only the molecules are ordered in increasing dG order in the `ordered_output*` files.   
-7.- _**<path_to_directory_where_you_want_filtered_results>**_: This is the fifth argument the `filtering.R` takes and the sixth that `Rstudio` takes. You can actually 
+			Filter molecules which Ki is between -3.5 and -5.7: "-5.7,-3.7" # Use a comma to separate the two values   
+   Note that the quotation marks **ARE REQUIRED** !   
+   6) _**<FILT_PAR>**_: This is the fourth argument the `filtering.R` takes and the fifth that `Rstudio` takes. It is **0** if you do not want to filter anything - this is the default mode the pipeline runs, in which nothing is filtered but only the molecules are ordered in increasing dG order in the `ordered_output*` files.   
+   7) _**<path_to_directory_where_you_want_filtered_results>**_: This is the fifth argument the `filtering.R` takes and the sixth that `Rstudio` takes. You can actually 
 put the path to any directory in which you want the filtered molecules - and output pdf files with filtered molecules - to be saved. If you want, you can take advantage 
 of `VSpipe` creating the `filtered_results` directory and you can use it, if you want to.
 
@@ -780,10 +679,10 @@ Rscript ~/Applications/VSpipe/Tools/filtering.R  results/ 8 ">-5" 1 filtered_res
 ```
 
 In this case, I want:   
-   a) To filter... *(I have **1** as the 5th argument and not a **0**, that is why I know I want to filter)*   
-   b) ... the molecules according to dG *(according to dF because this is what the **8** as a 3rd argument does)*   
-   c) ... that are larger than -5 *(this is what **">-5"** does as a 4th argument)*   
-   d) ... and save the output files and filtered molecules in `filtered_results/` *(it assumes you have in the directory from where you are running this command a directory called `filtered_results`)*
+   * To filter... *(I have **1** as the 5th argument and not a **0**, that is why I know I want to filter)*   
+   * ... the molecules according to dG *(according to dF because this is what the **8** as a 3rd argument does)*   
+   * ... that are larger than -5 *(this is what **">-5"** does as a 4th argument)*   
+   * ... and save the output files and filtered molecules in `filtered_results/` *(it assumes you have in the directory from where you are running this command a directory called `filtered_results`)*   
 
 
 And this is it! Now you can filter your results according to different parameters and using different threshold!
