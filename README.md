@@ -10,7 +10,7 @@ Please, download the [`VSpipe.tar.gz`](https://github.com/sabifo4/VSpipe/release
    * WLS users, please follow the instructions [here](https://github.com/sabifo4/VSpipe/blob/master/Installation/Install_dependencies_WLS.md).   
    
 For a quick start, follow the tutorial [here](https://github.com/sabifo4/VSpipe/tree/master/Tutorial). 
-*More tutorials to come describing several options on how to carry out virtual screenings with `VSpipe`.  
+*More tutorials to come describing several options on how to carry out virtual screenings with `VSpipe`.*  
 
 ## Citation
 
