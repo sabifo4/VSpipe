@@ -5,13 +5,11 @@
 First, go to [their website](http://mgltools.scripps.edu/downloads/latest) and download the [Linux release](http://mgltools.scripps.edu/downloads/tars/releases/nightly/latest/REL/mgltools_x86_64Linux2_latest.tar.gz)
 This installation procedure assumes that:   
    1. You have already cloned this repository (e.g., you might see `VSpipe-master`).   
-   2. You have downloaded the `VSpipe.zip` file from [releases](https://github.com/sabifo4/VSpipe/releases), unzipped it, and you have 
-   saved it in this cloned directory (e.g., `VSpipe-master/VSpipe`).   
-   3. You have saved the downloaded tar file from `MGLTools`, untarred it, and saved it inside the previously unzipped directory 
-   `VSpipe`, i.e., `VSpipe-master/VSpipe/mgltools_x86_64Linux2_latest`)
+   2. You have downloaded the `VSpipe.tar.gz` file from [releases](https://github.com/sabifo4/VSpipe/releases/tag/v1.0), untarred it,   and you have saved it in this cloned directory (e.g., `VSpipe-master/VSpipe`).   
+   3. You have downloaded the `mgltools_x86_64Linux2_latest.tar.gz`, untarred it, and saved it inside the untarred `VSpipe.tar.gz`. Assuming you have saved `VSpipe` inside `VSpipe-master`, you should have the `MGLTools` software saved as `VSpipe-master/VSpipe/mgltools_x86_64Linux2_latest`.
 
 Let's consider that you have decided to clone this repository (e.g., `VSpipe-master`) inside `~/Applications`.
-Therefore, before starting with the MGLTools installation, you should make sure your directory architecture looks like 
+Therefore, before starting with the `MGLTools` installation, you should make sure your directory architecture looks like 
 something such as: 
 
 ```  
@@ -25,7 +23,7 @@ Applications
       |     |- VSpipe_details.docx
       |
       |- Tutorial 
-      |     |- Tutorial_VSpipe.md
+      |     |- *.md
       | 
       |- VSpipe
       |     |- Tools 
@@ -39,7 +37,7 @@ Applications
 
 Once you make sure that everything is ready, then follow the next commands. 
 Make sure that you do not just copy and paste, as here we assume the file architecture described 
-above (i.e., `~/Applications/VSpipe-master/VSpipe`). **Change the paths according to your path system**.
+above (i.e., `~/Applications/VSpipe-master/VSpipe`). **If you have saved `VSpipe` somewhere else, please make sure that you change the paths described in the installation procedure below so it matches your path**
 
 ```
 cd ~/Applications/VSpipe-master/VSpipe
@@ -75,7 +73,7 @@ sed -i 's/export\ PATH\=\"\$MGL\_ROOT\/bin\:\"\$PATH/\#export\ PATH\=\"\$MGL\_RO
 	\necho\ \"export\ PATH\=\$PATH\:\$MGL\_ROOT\/bin\"\ \>\>\ \~\/\.bashrc\ \#\ SAC\: new\ line\ added/' install.sh
 ```
 
-*After that, you can just rerun the script, `./install.sh`, and it should install without errors `MGLTools`*.
+*After that, you can rerun the script `./install.sh` and it should install `MGLTools` without errors.*.
 
 ---
 
@@ -204,7 +202,7 @@ Here, you have a summary of the basic OpenBabel installation. If you want an adv
 INSTALL file or the link provided above.
 
 *NOTE: The following instructions assume that the OpenBabel source distribution is in 
-the directory ~/Applications/VSpipe-master/VSpipe/openbabel-2.4.1.
+the directory ~/Applications/VSpipe-master/VSpipe/openbabel-2.4.1.*
 
 ```
 # 1. Create a 'build' directory:
