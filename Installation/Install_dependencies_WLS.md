@@ -20,7 +20,6 @@ Applications
       |     |- Install_dependencies_MacOSX.md 
       |     |- Install_dependencies_Linux.md 
       |     |- Install_dependencies_WLS.md 
-      |     |- VSpipe_details.docx
       | 
       |- Tutorial 
       |     |- *.md

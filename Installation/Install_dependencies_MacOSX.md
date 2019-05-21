@@ -5,7 +5,7 @@
 First, go to [their website](http://mgltools.scripps.edu/downloads) and download the [Mac OS X release](http://mgltools.scripps.edu/downloads/downloads/tars/releases/REL1.5.6/mgltools_i86Darwin9_1.5.6.tar.gz)
 This installation procedure assumes that:   
    1. You have already cloned this repository (e.g., you might see `VSpipe-master`).   
-   2. You have downloaded the `VSpipe.tar.gz` file from [releases](https://github.com/sabifo4/VSpipe/releases/tag/v1.0), untarred it,   and you have saved it in this cloned directory (e.g., `VSpipe-master/VSpipe`).   
+   2. You have downloaded the `VSpipe.tar.gz` file from [releases](https://github.com/sabifo4/VSpipe/releases/tag/v1.0), untarred it, and you have saved it in this cloned directory (e.g., `VSpipe-master/VSpipe`).   
    3. You have downloaded the `mgltools_i86Darwin9_1.5.6.tar.gz`, untarred it, and saved it inside the untarred `VSpipe.tar.gz`. Assuming you have saved `VSpipe` inside `VSpipe-master`, you should have the `MGLTools` software saved as `VSpipe-master/VSpipe/mgltools_i86Darwin9_1.5.6`.
 
 Let's consider that you have decided to clone this repository (e.g., `VSpipe-master`) inside `~/Applications`.
@@ -20,7 +20,6 @@ Applications
       |     |- Install_dependencies_MacOSX.md 
       |     |- Install_dependencies_Linux.md 
       |     |- Install_dependencies_WLS.md 
-      |     |- VSpipe_details.docx
       |
       |- Tutorial 
       |     |- *.md
