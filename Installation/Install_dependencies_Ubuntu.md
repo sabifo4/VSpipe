@@ -22,10 +22,10 @@ Applications
       |     |- Install_dependencies_MacOSX.md 
       |     |- Install_dependencies_Linux.md 
       |     |- Install_dependencies_WLS.md 
-	  |     |- VSpipe_details.docx
-	  | 
-	  |- Tutorial 
-	  |     |- Tutorial_VSpipe.md
+      |     |- VSpipe_details.docx
+      |
+      |- Tutorial 
+      |     |- Tutorial_VSpipe.md
       | 
       |- VSpipe
       |     |- Tools 
@@ -67,14 +67,16 @@ and then, from the terminal, execute the `install.sh` script:
 ```
 
 ---
+
 *NOTE: If you get an error message about line 78, you should use the next command. It will comment this line and 
-add a new command that makes the installation procedure work: 
+add a new command that makes the installation procedure work*: 
 ```
 sed -i 's/export\ PATH\=\"\$MGL\_ROOT\/bin\:\"\$PATH/\#export\ PATH\=\"\$MGL\_ROOT\/bin\:\"\$PATH\ \#\ SAC\:\ original\ line\ commented\
 	\necho\ \"export\ PATH\=\$PATH\:\$MGL\_ROOT\/bin\"\ \>\>\ \~\/\.bashrc\ \#\ SAC\: new\ line\ added/' install.sh
 ```
 
-After that, you could just rerun the script, `./install.sh`, and it should install without errors `MGLTools`.
+*After that, you can just rerun the script, `./install.sh`, and it should install without errors `MGLTools`*.
+
 ---
 
 You will see how several messages are printed out in your terminal as `MGLTools` is being installed. At the end 
@@ -169,8 +171,6 @@ chmod 775 ~/Applications/VSpipe-master/VSpipe/Tools
 
 
 ## Installing OpenBabel  
-
-# 1. Install the current version:
 
 Before going through the OpenBabel installation, there are some additional packages that you might want to install if 
 you want to have OpenBabel with all the features it can offer:
