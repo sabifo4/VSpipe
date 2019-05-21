@@ -1,7 +1,5 @@
 # VSpipe
 
-## VSpipe for local PC
-
 This repository contains the `VSpipe v1.0` software, which can be downloaded from the [`releases`](https://github.com/sabifo4/VSpipe/releases/tag/v1.0) section, a pipeline to carry out virtual screenings. 
 
 Currently, `VSpipe` runs in Mac OS X, the Windows Linux Subsystem, and Linux distributions (we have only tested VSpipe in Ubuntu, but it should work in any other Linux distribution).
