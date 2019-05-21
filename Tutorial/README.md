@@ -610,13 +610,13 @@ Let's see what each bit of this command does:
 
 ---------------------------------------
 
-   1) _**Rscript**_: This is the command that runs R. The first argument is the `R` script and then you can have the arguments.   
-   2) _**<path_to_VSpipe>/VSpipe/Tools/filtering.R**_: This is the first argument the `Rscript` commands needs: the path to the `filgering.R` file.   
-   3) _**<path_to_your_results_dir_where_you_run_VSpipe>**_: This is the first argument that the `filtering.R` takes and the second `Rscript` takes. 
+   * _**Rscript**_: This is the command that runs R. The first argument is the `R` script and then you can have the arguments.   
+   * _**<path_to_VSpipe>/VSpipe/Tools/filtering.R**_: This is the first argument the `Rscript` commands needs: the path to the `filgering.R` file.   
+   * _**<path_to_your_results_dir_where_you_run_VSpipe>**_: This is the first argument that the `filtering.R` takes and the second `Rscript` takes. 
    The arguments is the path to the `results` directory that was created by VSpipe during 
    the virtual screening and where all the results are. If you have moved to this directory, then you can just type `results/`, **WITH THE SLASH** !!
    If you are running this command somewhere else, make sure that you type the whole path to where this `results` directory is.   
-   4) _**<ORDER_PAR>**_: This is the second argument the `filtering.R` takes and the third that `Rstudio` takes: This is a number that is used to let this
+   * _**<ORDER_PAR>**_: This is the second argument the `filtering.R` takes and the third that `Rstudio` takes: This is a number that is used to let this
    script know which column contains the property that needs to be used to order and filter the `output.csv` file. Depending on which property you want to use to 
    filter the `output.csv` file, you should type one of the following numbers:   
 
@@ -627,19 +627,19 @@ Let's see what each bit of this command does:
                5: HBA                 13: NSEI
                6: PSA                 14: NBEI
                7: rotatable bonds     15: nBEI
-               8: dG                  16: mBEI 		   
-   For instance, if you were to use the Ki to filter your `output.csv`, you should type a **9** as the third argument in the whole command (_**NO QUOTATION MARKS!**_).   
-   5) _**<CHOICE_PAR>**_: This is the third argument the `filtering.R` takes and the fourth that `Rstudio` takes. You can filter something by a value greater or lower than 
+               8: dG                  16: mBEI 		     
+	       
+**NOTE**: For instance, if you were to use the Ki to filter your `output.csv`, you should type a **9** as the third argument in the whole command (_**NO QUOTATION MARKS!**_).   
+   * _**<CHOICE_PAR>**_: This is the third argument the `filtering.R` takes and the fourth that `Rstudio` takes. You can filter something by a value greater or lower than 
 another or withing a range. For instance:
 			
 			Filter molecules which Ki is larger than -5.7: ">-5.7"          # Use the symbol > followed by the value 
 			Filter molecules which Ki is lower than -5.7: "<-5.7"           # Use the symbol < followed by the value 
 			Filter molecules which Ki is between -3.5 and -5.7: "-5.7,-3.7" # Use a comma to separate the two values   
-   Note that the quotation marks **ARE REQUIRED** !   
-   6) _**<FILT_PAR>**_: This is the fourth argument the `filtering.R` takes and the fifth that `Rstudio` takes. It is **0** if you do not want to filter anything - this is the default mode the pipeline runs, in which nothing is filtered but only the molecules are ordered in increasing dG order in the `ordered_output*` files.   
-   7) _**<path_to_directory_where_you_want_filtered_results>**_: This is the fifth argument the `filtering.R` takes and the sixth that `Rstudio` takes. You can actually 
-put the path to any directory in which you want the filtered molecules - and output pdf files with filtered molecules - to be saved. If you want, you can take advantage 
-of `VSpipe` creating the `filtered_results` directory and you can use it, if you want to.
+   
+**NOTE that the quotation marks ARE REQUIRED !**   
+   * _**<FILT_PAR>**_: This is the fourth argument the `filtering.R` takes and the fifth that `Rstudio` takes. It is **0** if you do not want to filter anything - this is the default mode the pipeline runs, in which nothing is filtered but only the molecules are ordered in increasing dG order in the `ordered_output*` files.   
+   * _**<path_to_directory_where_you_want_filtered_results>**_: This is the fifth argument the `filtering.R` takes and the sixth that `Rstudio` takes. You can actually put the path to any directory in which you want the filtered molecules - and output pdf files with filtered molecules - to be saved. If you want, you can take advantage of `VSpipe` creating the `filtered_results` directory and you can use it, if you want to.
 
 ---------------------------------------
 
