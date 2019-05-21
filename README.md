@@ -2,11 +2,18 @@
 
 ## VSpipe for local PC
 
-This repository contains the `VSpipe v0.1.0` software in the [`releases`](https://github.com/sabifo4/VSpipe/releases) section, a pipeline to carry out virtual screenings. It includes its documentation and an installation file for the dependencies `VSpipe` requires to work.
+This repository contains the `VSpipe v1.0` software, which can be downloaded from the [`releases`](https://github.com/sabifo4/VSpipe/releases/tag/v1.0) section, a pipeline to carry out virtual screenings. 
 
-Currently, `VSpipe` can be run in Mac OSX and Linux distributions.
+Currently, `VSpipe` runs in Mac OS X, the Windows Linux Subsystem, and Linux distributions (we have only tested VSpipe in Ubuntu, but it should work in any other Linux distribution).
 
-Please download the [`VSpipe.zip`](https://github.com/sabifo4/VSpipe/releases/download/v0.1.0/VSpipe.zip) file and follow the instructions to install the dependencies. For a quick start, follow the instructions in the `Tutorial_VSpipe.md` file. 
+Please, download the [`VSpipe.tar.gz`](https://github.com/sabifo4/VSpipe/releases/download/v1.0/VSpipe.tar.gz) file and follow the instructions to install the dependencies on which `VSpipe` relies:   
+
+   a) Linux users, please follow the instructions [here](https://github.com/sabifo4/VSpipe/blob/master/Installation/Install_dependencies_Ubuntu.md).   
+   b) Mac OS X, please follow the instructions [here](https://github.com/sabifo4/VSpipe/blob/master/Installation/Install_dependencies_MacOSX.md).   
+   c) WLS users, please follow the instructions [here](https://github.com/sabifo4/VSpipe/blob/master/Installation/Install_dependencies_WLS.md).   
+   
+For a quick start, follow the tutorial [here](https://github.com/sabifo4/VSpipe/tree/master/Tutorial). 
+*More tutorials to come describing several options on how to carry out virtual screenings with `VSpipe`.  
 
 ## Citation
 
