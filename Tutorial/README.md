@@ -137,20 +137,20 @@ to type the whole path to the bash script:
 First, make sure you are in your working directory
 
 ```bash
-pwd 
+$ pwd 
 /home/user/my_dockings/test_VSpipe
 ```
 
 Then, you can run `VSpipe` for the first time saving a log file 
 
 ```bash
-VSpipe 2>&1 | tee logfile.txt
+$ VSpipe 2>&1 | tee logfile.txt
 ```
 
 If you want a log file saving the messages printed on the screen, you should run `VSpipe` as:
 
 ```bash
-VSpipe 2>&1 | tee logfile.txt
+$ VSpipe 2>&1 | tee logfile.txt
 ```
 
 This will create a file called `logfile.txt` in your working directory (`/home/user/my_dockings/test_VSpipe`).
@@ -602,8 +602,8 @@ might find this in the absolute path `~/Applications/VSpipe-master/VSpipe/Tools`
 
 The way you call this file from a terminal is the following:
 
-```
-Rscript <path_to_VSpipe>/VSpipe/Tools/filtering.R <path_to_your_results_dir_where_you_run_VSpipe> <ORDER_PAR> <CHOICE_PAR> <FILT_PAR> <path_to_directory_where_you_want_filtered_results>
+```bash
+$ Rscript <path_to_VSpipe>/VSpipe/Tools/filtering.R <path_to_your_results_dir_where_you_run_VSpipe> <ORDER_PAR> <CHOICE_PAR> <FILT_PAR> <path_to_directory_where_you_want_filtered_results>
 ```
 
 Let's see what each bit of this command does:
@@ -672,10 +672,8 @@ Test_VSpipe
 
 ... then you could open a terminal inside `Test_VSpipe/results` (or type `cd` to move to that specific directory) and then run the `filtering.R` like this: 
 
-```
-
-Rscript ~/Applications/VSpipe/Tools/filtering.R  results/ 8 ">-5" 1 filtered_results/ 
-
+```bash
+$ Rscript ~/Applications/VSpipe/Tools/filtering.R  results/ 8 ">-5" 1 filtered_results/ 
 ```
 
 In this case, I want:   
