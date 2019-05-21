@@ -5,13 +5,11 @@
 First, go to [their website](http://mgltools.scripps.edu/downloads) and download the [Mac OS X release](http://mgltools.scripps.edu/downloads/downloads/tars/releases/REL1.5.6/mgltools_i86Darwin9_1.5.6.tar.gz)
 This installation procedure assumes that:   
    1. You have already cloned this repository (e.g., you might see `VSpipe-master`).   
-   2. You have downloaded the `VSpipe.zip` file from [releases](https://github.com/sabifo4/VSpipe/releases), unzipped it, and you have 
-   saved it in this cloned directory (e.g., `VSpipe-master/VSpipe`).   
-   3. You have saved the downloaded tar file from `MGLTools`, untarred it, and saved it inside the previously unzipped directory 
-   `VSpipe`, i.e., `VSpipe-master/VSpipe/mgltools_i86Darwin9_1.5.6.tar.gz`)
+   2. You have downloaded the `VSpipe.tar.gz` file from [releases](https://github.com/sabifo4/VSpipe/releases/tag/v1.0), untarred it,   and you have saved it in this cloned directory (e.g., `VSpipe-master/VSpipe`).   
+   3. You have downloaded the `mgltools_i86Darwin9_1.5.6.tar.gz`, untarred it, and saved it inside the untarred `VSpipe.tar.gz`. Assuming you have saved `VSpipe` inside `VSpipe-master`, you should have the `MGLTools` software saved as `VSpipe-master/VSpipe/mgltools_i86Darwin9_1.5.6`.
 
 Let's consider that you have decided to clone this repository (e.g., `VSpipe-master`) inside `~/Applications`.
-Therefore, before starting with the MGLTools installation, you should make sure your directory architecture looks like 
+Therefore, before starting with the `MGLTools` installation, you should make sure your directory architecture looks like 
 something such as: 
 
 ```  
@@ -25,7 +23,7 @@ Applications
       |     |- VSpipe_details.docx
       |
       |- Tutorial 
-      |     |- Tutorial_VSpipe.md
+      |     |- *.md
       | 
       |- VSpipe
       |     |- Tools 
@@ -39,7 +37,7 @@ Applications
 
 Once you make sure that everything is ready, then follow the next commands. 
 Make sure that you do not just copy and paste, as here we assume the file architecture described 
-above (i.e., `~/Applications/VSpipe-master/VSpipe`). **Change the paths according to your path system**.
+above (i.e., `~/Applications/VSpipe-master/VSpipe`). **If you have saved `VSpipe` somewhere else, please make sure that you change the paths described in the installation procedure below so it matches your path**
 
 ```
 cd ~/Applications/VSpipe-master/VSpipe
@@ -185,10 +183,14 @@ make && make install
 rm -rf ~/Applications/VSpipe-master/VSpipe/openbabel-2.4.1
 ```
 
+--- 
+
 _**(OPTIONAL) Installing Anaconda**_   
 If you have Python installed on your PC, Anaconda is not needed by `VSpipe`. 
 Nevertheless, if you do not have Anaconda but you would like to have it, you can download the Mac OS X release [here](https://www.anaconda.com/download/#download)
 Just follow the instructions of the installer - it should be an easy procedure! 
+
+---
 
 ## Problems with Numpy
 
