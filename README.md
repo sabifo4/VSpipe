@@ -18,4 +18,4 @@ If you use `VSpipe`, please cite [VSpipe, an Integrated Resource for Virtual Scr
 
 ## Questions
 
-If you have any questions, please send them to [vspipe.local@gmail.com](mailto://vspipe.local@gmail.com) and we will try to help you with any problem you might encounter when running  `VSpipe`. Happy docking!!
+If you have any questions, please send them [here](mailto://sandra.ac93@gmail.com) and we will try to help you with any problem you might encounter when running  `VSpipe`. Happy docking!!
